@@ -66,11 +66,11 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 app.use(express.static(path.join(__dirname, '../scripts')));
 
-// var corsOptions = {
-//   origin: "http://localhost:4200"
-// };
+var corsOptions = {
+  origin: "https://comp229group1frontend.herokuapp.com/"
+};
 app.use(cors(corsOptions));
-app.options('*', cors());
+// app.options('*', cors());
 
 //setup express session
 // app.use(session({
