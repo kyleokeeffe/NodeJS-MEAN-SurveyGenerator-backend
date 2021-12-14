@@ -66,10 +66,11 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 app.use(express.static(path.join(__dirname, '../scripts')));
 
-var corsOptions = {
-  origin: "http://localhost:4200"
-};
+// var corsOptions = {
+//   origin: "http://localhost:4200"
+// };
 app.use(cors(corsOptions));
+app.options('*', cors());
 
 //setup express session
 // app.use(session({
